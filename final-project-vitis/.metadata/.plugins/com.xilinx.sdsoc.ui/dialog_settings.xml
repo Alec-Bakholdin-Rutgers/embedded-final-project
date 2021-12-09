@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="sdx.custom.platform.repository.locations" value="/home/user/final-project/final-project-vitis/audio_mixer/export/audio_mixer;/home/user/final-project/final-project-vitis/oled_demo_wrapper/export/oled_demo_wrapper"/>
+	<item key="sdx.custom.platform.repository.last.directory.dialog.location" value="/home/user/final-project/final-project-vitis/oled_demo_wrapper/export/oled_demo_wrapper"/>
+</section>

@@ -1,0 +1,24 @@
+Nothing to build in platform 'oled_demo_wrapper'
+
+19:40:34 **** Incremental Build of configuration Debug for project oled_demo ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+ 
+make --no-print-directory main-build
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I/home/user/final-project/final-project-vitis/oled_demo_wrapper/export/oled_demo_wrapper/sw/oled_demo_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: oled_demo.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L/home/user/final-project/final-project-vitis/oled_demo_wrapper/export/oled_demo_wrapper/sw/oled_demo_wrapper/standalone_ps7_cortexa9_0/bsplib/lib -o "oled_demo.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: oled_demo.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size oled_demo.elf  |tee "oled_demo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33771	   1176	  23512	  58459	   e45b	oled_demo.elf
+Finished building: oled_demo.elf.size
+ 

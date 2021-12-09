@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="audio_mixer_vitis" location="/home/user/final-project/final-project-vitis/audio_mixer_vitis" platform="/home/user/final-project/final-project-vitis/audio_mixer/export/audio_mixer/audio_mixer.xpfm" platformUID="xilinx:zybo::0.0(custom)" systemProject="audio_mixer_vitis_system" sysConfig="audio_mixer" runtime="cpp" cpu="standalone_ps7_cortexa9_0" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="27a5edd2a170b2a1c5f921ec4be4e97d">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.1801293797" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.1462602471" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="empty_application"/>
+</sdkproject:SdkProject>

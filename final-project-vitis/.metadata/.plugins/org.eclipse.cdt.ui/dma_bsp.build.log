@@ -1,0 +1,6 @@
+17:30:17 **** Build of project dma_bsp ****
+make -k all 
+Finished building libraries
+
+17:30:17 Build Finished (took 435ms)
+
