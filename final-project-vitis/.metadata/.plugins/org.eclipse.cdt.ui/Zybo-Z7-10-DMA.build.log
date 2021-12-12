@@ -1,0 +1,7 @@
+14:48:07 **** Clean-only build of configuration Debug for project Zybo-Z7-10-DMA ****
+make clean 
+rm -rf  ./src/userio/userio.o  ./src/intc/intc.o  ./src/iic/iic.o  ./src/dma/dma.o  ./src/audio/audio.o  ./src/demo.o ./src/platform.o  ./src/userio/userio.d  ./src/intc/intc.d  ./src/iic/iic.d  ./src/dma/dma.d  ./src/audio/audio.d  ./src/demo.d ./src/platform.d  Zybo-Z7-10-DMA.elf.size  Zybo-Z7-10-DMA.elf
+' '
+
+14:48:07 Build Finished (took 157ms)
+

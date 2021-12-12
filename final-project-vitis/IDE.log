@@ -3218,3 +3218,35 @@ con
 ----------------End of Script----------------
 
 19:40:42 INFO  : Disconnected from the channel tcfchan#69.
+14:15:03 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\College\senior\fall\embedded-systems-2\final-project\final-project-vitis\temp_xsdb_launch_script.tcl
+14:15:07 ERROR : Error encountered while initializing user repository paths
+Reason: No Platforms Found.
+
+
+14:15:07 INFO  : Platform repository initialization has completed.
+14:15:08 INFO  : Registering command handlers for Vitis TCF services
+14:15:08 INFO  : XSCT server has started successfully.
+14:15:13 INFO  : plnx-install-location is set to ''
+14:15:13 INFO  : Successfully done setting XSCT server connection channel  
+14:15:13 INFO  : Successfully done query RDI_DATADIR 
+14:15:13 INFO  : Successfully done setting workspace for the tool. 
+14:43:53 INFO  : Platform 'system_wrapper' is added to custom repositories.
+14:44:12 INFO  : Checking for BSP changes to sync application flags for project 'Zybo-Z7-10-DMA'...
+14:46:16 INFO  : Checking for BSP changes to sync application flags for project 'Zybo-Z7-10-DMA'...
+14:46:31 INFO  : Checking for BSP changes to sync application flags for project 'Zybo-Z7-10-DMA'...
+14:47:19 INFO  : Checking for BSP changes to sync application flags for project 'Zybo-Z7-10-DMA'...
+14:48:05 ERROR : Error encountered while removing 'C:\College\senior\fall\embedded-systems-2\final-project\final-project-vitis\system_wrapper\export\system_wrapper' from custom repository paths
+Reason: No Platforms Found.
+
+
+14:48:05 INFO  : Result from executing command 'removePlatformRepo': 
+14:48:13 INFO  : Checking for BSP changes to sync application flags for project 'Zybo-Z7-10-DMA'...
+14:48:13 ERROR : Failed to get platform details for the project 'Zybo-Z7-10-DMA'. Cannot sync application flags.
+14:48:56 ERROR : Error encountered while adding 'C:\College\senior\fall\embedded-systems-2\final-project\final-project-vitis\system_wrapper\export' to custom repository paths
+Reason: No Platforms Found.
+
+
+14:49:11 INFO  : Checking for BSP changes to sync application flags for project 'Zybo-Z7-10-DMA'...
+14:49:11 ERROR : Failed to get platform details for the project 'Zybo-Z7-10-DMA'. Cannot sync application flags.
+14:52:21 INFO  : Checking for BSP changes to sync application flags for project 'oled_demo'...
+14:52:21 ERROR : Failed to get platform details for the project 'oled_demo'. Cannot sync application flags.
