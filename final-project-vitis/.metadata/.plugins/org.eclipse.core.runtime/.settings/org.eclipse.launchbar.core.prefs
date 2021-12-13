@@ -1,9 +1,11 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=linux
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:Debugger_oled_demo-GDB
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:Debugger_Zybo-Z7-10-DMA-GDB_1,org.eclipse.launchbar.core.descriptorType.default\:Debugger_Zybo-Z7-10-DMA-GDB_2,org.eclipse.launchbar.core.descriptorType.default\:Debugger_oled_demo-GDB,org.eclipse.launchbar.core.descriptorType.default\:Debugger_Zybo-Z7-10-DMA-GDB
 eclipse.preferences.version=1
 org.eclipse.cdt.debug.core.coreBuildDescriptorType\:dma_bsp/activeLaunchMode=run
 org.eclipse.cdt.debug.core.coreBuildDescriptorType\:dma_bsp/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:Debugger_Zybo-Z7-10-DMA-GDB/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:Debugger_Zybo-Z7-10-DMA-GDB_1/activeLaunchMode=debug
 org.eclipse.launchbar.core.descriptorType.default\:Debugger_oled_demo-GDB/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:Debugger_oled_demo-GDB/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

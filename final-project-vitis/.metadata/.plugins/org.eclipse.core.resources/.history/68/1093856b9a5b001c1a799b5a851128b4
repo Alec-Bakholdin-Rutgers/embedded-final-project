@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="oled_demo" location="/home/user/final-project/final-project-vitis/oled_demo" platform="/home/user/final-project/final-project-vitis/oled_demo_wrapper/export/oled_demo_wrapper/oled_demo_wrapper.xpfm" platformUID="xilinx:zybo::0.0(custom)" systemProject="oled_demo_system" sysConfig="oled_demo_wrapper" runtime="cpp" cpu="standalone_ps7_cortexa9_0" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="e745bb01f9332b870e140a892b0810d9">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.604064771">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.172974265" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="empty_application"/>
+</sdkproject:SdkProject>

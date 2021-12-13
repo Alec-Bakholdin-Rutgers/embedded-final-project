@@ -1,0 +1,46 @@
+#include "main.h"
+
+#include "audio/audio.h"
+#include "dma/dma.h"
+#include "intc/intc.h"
+#include "userio/userio.h"
+#include "iic/iic.h"
+
+#include "xaxidma.h"
+#include "xparameters.h"
+#include "xil_exception.h"
+#include "xdebug.h"
+#include "xiic.h"
+#include "xaxidma.h"
+#include "xtime_l.h"
+
+#define AUDIO_SAMPLE_RATE	96000
+#define MAX_REC_TIME_SEC	10
+#define AUDIO_SAMPLES		(AUDIO_SAMPLE_RATE * MAX-REC_TIME_SEC)
+
+static XIic sIic;
+static XAxiDma sAxiDma;
+static XGpio sUserIO;
+static XScuGic sIntc;
+const ivt_t ivt[] = {
+	//IIC
+	{XPAR_FABRIC_AXI_IIC_0_IIC2INTC_IRPT_INTR, (Xil_ExceptionHandler)XIic_InterruptHandler, &sIic},
+	//DMA Stream to MemoryMap Interrupt handler
+	{XPAR_FABRIC_AXI_DMA_0_S2MM_INTROUT_INTR, (Xil_ExceptionHandler)fnS2MMInterruptHandler, &sAxiDma},
+	//DMA MemoryMap to Stream Interrupt handler
+	{XPAR_FABRIC_AXI_DMA_0_MM2S_INTROUT_INTR, (Xil_ExceptionHandler)fnMM2SInterruptHandler, &sAxiDma},
+	//User I/O (buttons, switches, LEDs)
+	{XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR, (Xil_ExceptionHandler)fnUserIOIsr, &sUserIO}
+};
+sAudioMixer_t AudioMixer;
+
+int main(void) {
+	int Status;
+	AudioMixer.u8Verbose = 0;
+
+	fnInitInterruptController(&sIntc);
+	fnInitIic(&sIic);
+	fnInitUserIO(&sUserIO);
+	fnConfigDma(&sAxiDma);
+	fnInitAudio();
+}

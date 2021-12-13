@@ -1,6 +1,6 @@
-2021-12-12T14:49:09.618327300255-14:49:09 **** Build of project system_wrapper ****
-000-buildplatform.bat 59707 system_wrapper  
-000-XSDB Server Channel: tcfchan#9
+2021-12-12T19:57:06.30786900255-19:57:06 **** Build of project system_wrapper ****
+000-buildplatform.sh 37393 system_wrapper  
+000-XSDB Server Channel: tcfchan#43
 000-Failed to generate the platform.
 000-Reason: Error: Qemu arguments File given  D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt do not exist
 000-    invoked from within
@@ -15,7 +15,7 @@
 000-    set PLATFORM_NAME [lindex $argv 1]
 000-    set arglen [llength $argv]
 000-    set lastind..."
-000-    (file "D:/Xilinx/Vitis/2021.1\scripts\vitis\util\buildplatform.tcl" line 11)
+000-    (file "/home/software/Xilinx/Vitis/2021.1/scripts/vitis/util/buildplatform.tcl" line 11)
 00255-
-14:49:11 Build Finished (took 1s.501ms)
+19:57:11 Build Finished (took 5s.583ms)
 

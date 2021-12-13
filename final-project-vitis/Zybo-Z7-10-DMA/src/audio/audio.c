@@ -59,11 +59,11 @@
 
 
 #include "audio.h"
-#include "../demo.h"
+#include "../main.h"
 
 /************************** Variable Definitions *****************************/
 
-extern volatile sDemo_t Demo;
+
 
 /******************************************************************************
  * Function to write one byte (8-bits) to one of the registers from the audio
@@ -254,7 +254,7 @@ XStatus fnAudioStartupConfig ()
 	Status = XST_SUCCESS;
 	if (Status == XST_FAILURE)
 	{
-		if (Demo.u8Verbose)
+		if (AudioMixer.u8Verbose)
 		{
 			xil_printf("\r\nError: could not write R15_SOFTWARE_RESET (0x00)");
 		}
@@ -264,7 +264,7 @@ XStatus fnAudioStartupConfig ()
 	Status = fnAudioWriteToReg(R6_POWER_MGMT, 0b000110000);
 	if (Status == XST_FAILURE)
 	{
-		if (Demo.u8Verbose)
+		if (AudioMixer.u8Verbose)
 		{
 			xil_printf("\r\nError: could not write R6_POWER_MGMT (0b000110000)");
 		}
@@ -273,7 +273,7 @@ XStatus fnAudioStartupConfig ()
 	Status = fnAudioWriteToReg(R0_LEFT_ADC_VOL, 0b000010111);
 	if (Status == XST_FAILURE)
 	{
-		if (Demo.u8Verbose)
+		if (AudioMixer.u8Verbose)
 		{
 			xil_printf("\r\nError: could not write R0_LEFT_ADC_VOL (0b000010111)");
 		}
@@ -282,7 +282,7 @@ XStatus fnAudioStartupConfig ()
 	Status = fnAudioWriteToReg(R1_RIGHT_ADC_VOL, 0b000010111);
 	if (Status == XST_FAILURE)
 	{
-		if (Demo.u8Verbose)
+		if (AudioMixer.u8Verbose)
 		{
 			xil_printf("\r\nError: could not write R0_LEFT_ADC_VOL (0b000010111)");
 		}
@@ -291,7 +291,7 @@ XStatus fnAudioStartupConfig ()
 	Status = fnAudioWriteToReg(R2_LEFT_DAC_VOL, 0b101111001);
 	if (Status == XST_FAILURE)
 	{
-		if (Demo.u8Verbose)
+		if (AudioMixer.u8Verbose)
 		{
 			xil_printf("\r\nError: could not write R0_LEFT_ADC_VOL (0b000010111)");
 		}
@@ -300,7 +300,7 @@ XStatus fnAudioStartupConfig ()
 	Status = fnAudioWriteToReg(R3_RIGHT_DAC_VOL, 0b101111001);
 	if (Status == XST_FAILURE)
 	{
-		if (Demo.u8Verbose)
+		if (AudioMixer.u8Verbose)
 		{
 			xil_printf("\r\nError: could not write R0_LEFT_ADC_VOL (0b000010111)");
 		}
@@ -309,7 +309,7 @@ XStatus fnAudioStartupConfig ()
 	Status = fnAudioWriteToReg(R4_ANALOG_PATH, 0b000000000);
 	if (Status == XST_FAILURE)
 	{
-		if (Demo.u8Verbose)
+		if (AudioMixer.u8Verbose)
 		{
 			xil_printf("\r\nError: could not write R0_LEFT_ADC_VOL (0b000010111)");
 		}
@@ -351,14 +351,14 @@ XStatus fnInitAudio()
 	Status = fnAudioStartupConfig();
 	if (Status != XST_SUCCESS)
 	{
-		if (Demo.u8Verbose)
+		if (AudioMixer.u8Verbose)
 		{
 			xil_printf("\r\nError: Failed I2C Configuration");
 		}
 	}
 
-	Demo.fAudioPlayback = 0;
-	Demo.fAudioRecord = 0;
+	AudioMixer.fAudioPlayback = 0;
+	AudioMixer.fAudioRecord = 0;
 
 	return XST_SUCCESS;
 }
@@ -375,7 +375,7 @@ void fnAudioRecord(XAxiDma AxiDma, u32 u32NrSamples)
 {
 	union ubitField uTransferVariable;
 
-	if (Demo.u8Verbose)
+	if (AudioMixer.u8Verbose)
 	{
 		xil_printf("\r\nEnter Record function");
 	}
@@ -383,7 +383,7 @@ void fnAudioRecord(XAxiDma AxiDma, u32 u32NrSamples)
 	uTransferVariable.l = XAxiDma_SimpleTransfer(&AxiDma,(u32) MEM_BASE_ADDR, 5*u32NrSamples, XAXIDMA_DEVICE_TO_DMA);
 	if (uTransferVariable.l != XST_SUCCESS)
 	{
-		if (Demo.u8Verbose)
+		if (AudioMixer.u8Verbose)
 			xil_printf("\n fail @ rec; ERROR: %d", uTransferVariable.l);
 	}
 
@@ -399,7 +399,7 @@ void fnAudioRecord(XAxiDma AxiDma, u32 u32NrSamples)
 	// Enable Stream function to send data (S2MM)
 	Xil_Out32(I2S_STREAM_CONTROL_REG, 0x00000001);
 
-	if (Demo.u8Verbose)
+	if (AudioMixer.u8Verbose)
 	{
 		xil_printf("\r\nRecording function done");
 	}
@@ -417,7 +417,7 @@ void fnAudioPlay(XAxiDma AxiDma, u32 u32NrSamples)
 {
 	union ubitField uTransferVariable;
 
-	if (Demo.u8Verbose)
+	if (AudioMixer.u8Verbose)
 	{
 		xil_printf("\r\nEnter Playback function");
 	}
@@ -434,13 +434,13 @@ void fnAudioPlay(XAxiDma AxiDma, u32 u32NrSamples)
 	uTransferVariable.l = XAxiDma_SimpleTransfer(&AxiDma,(u32) MEM_BASE_ADDR, 5*u32NrSamples, XAXIDMA_DMA_TO_DEVICE);
 	if (uTransferVariable.l != XST_SUCCESS)
 	{
-		if (Demo.u8Verbose)
+		if (AudioMixer.u8Verbose)
 			xil_printf("\n fail @ play; ERROR: %d", uTransferVariable.l);
 	}
 
 	// Enable Stream function to send data (MM2S)
 		Xil_Out32(I2S_STREAM_CONTROL_REG, 0x00000002);
-	if (Demo.u8Verbose)
+	if (AudioMixer.u8Verbose)
 	{
 		xil_printf("\r\nPlayback function done");
 	}
@@ -458,7 +458,7 @@ void fnSetMicInput()
 {
 	//MX1AUXG = MUTE; MX2AUXG = MUTE; LDBOOST = 0dB; RDBOOST = 0dB
 	fnAudioWriteToReg(R4_ANALOG_PATH, 0b000010100);
-	if (Demo.u8Verbose)
+	if (AudioMixer.u8Verbose)
 	{
 		xil_printf("\r\nInput set to MIC");
 	}
@@ -477,7 +477,7 @@ void fnSetLineInput()
 	//MX1AUXG = 0dB; MX2AUXG = 0dB; LDBOOST = MUTE; RDBOOST = MUTE
 	fnAudioWriteToReg(R4_ANALOG_PATH, 0b000010010);
 	fnAudioWriteToReg(R5_DIGITAL_PATH, 0b000000000);
-	if (Demo.u8Verbose)
+	if (AudioMixer.u8Verbose)
 	{
 		xil_printf("\r\nInput set to LineIn");
 	}
@@ -497,7 +497,7 @@ void fnSetLineOutput()
 	//MX3G1 = mute; MX3G2 = mute; MX4G1 = mute; MX4G2 = mute;
 	//fnAudioWriteToReg(R4_ANALOG_PATH, 0x00);
 
-	if (Demo.u8Verbose)
+	if (AudioMixer.u8Verbose)
 	{
 		xil_printf("\r\nOutput set to LineOut");
 	}
@@ -516,7 +516,7 @@ void fnSetHpOutput()
 	//MX5G3 = MUTE; MX5EN = MUTE; MX6G4 = MUTE; MX6EN = MUTE
 	fnAudioWriteToReg(R4_ANALOG_PATH, 0b000010110);
 	fnAudioWriteToReg(R5_DIGITAL_PATH, 0b000000000);
-	if (Demo.u8Verbose)
+	if (AudioMixer.u8Verbose)
 	{
 		xil_printf("\r\nOutput set to HeadPhones");
 	}

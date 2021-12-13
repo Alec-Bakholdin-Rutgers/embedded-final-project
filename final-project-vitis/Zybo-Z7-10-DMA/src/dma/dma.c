@@ -6,11 +6,11 @@
  */
 
 #include "dma.h"
-#include "../demo.h"
+#include "../main.h"
 
 /************************** Variable Definitions *****************************/
 
-extern volatile sDemo_t Demo;
+
 extern XAxiDma_Config *pCfgPtr;
 
 /******************************************************************************
@@ -44,7 +44,7 @@ void fnS2MMInterruptHandler (void *Callback)
 	// processing.
 	if (IrqStatus & XAXIDMA_IRQ_ERROR_MASK)
 	{
-		Demo.fDmaError = 1;
+		AudioMixer.fDmaError = 1;
 		XAxiDma_Reset(AxiDmaInst);
 		TimeOut = 1000;
 		while (TimeOut)
@@ -60,7 +60,7 @@ void fnS2MMInterruptHandler (void *Callback)
 
 	if ((IrqStatus & XAXIDMA_IRQ_IOC_MASK))
 	{
-		Demo.fDmaS2MMEvent = 1;
+		AudioMixer.fDmaS2MMEvent = 1;
 	}
 }
 
@@ -94,7 +94,7 @@ void fnMM2SInterruptHandler (void *Callback)
 	// hardware to recover from the error, and return with no further
 	// processing.
 	if (IrqStatus & XAXIDMA_IRQ_ERROR_MASK){
-		Demo.fDmaError = 1;
+		AudioMixer.fDmaError = 1;
 		XAxiDma_Reset(AxiDmaInst);
 		TimeOut = 1000;
 		while (TimeOut)
@@ -109,7 +109,7 @@ void fnMM2SInterruptHandler (void *Callback)
 	}
 	if ((IrqStatus & XAXIDMA_IRQ_IOC_MASK))
 	{
-		Demo.fDmaMM2SEvent = 1;
+		AudioMixer.fDmaMM2SEvent = 1;
 	}
 }
 
@@ -131,7 +131,7 @@ XStatus fnConfigDma(XAxiDma *AxiDma)
 	pCfgPtr = XAxiDma_LookupConfig(XPAR_AXIDMA_0_DEVICE_ID);
 	if (!pCfgPtr)
 	{
-		if (Demo.u8Verbose)
+		if (AudioMixer.u8Verbose)
 		{
 			xil_printf("\r\nNo config found for %d", XPAR_AXIDMA_0_DEVICE_ID);
 		}
@@ -144,7 +144,7 @@ XStatus fnConfigDma(XAxiDma *AxiDma)
 	Status = XAxiDma_CfgInitialize(AxiDma, pCfgPtr);
 	if (Status != XST_SUCCESS)
 	{
-		if (Demo.u8Verbose)
+		if (AudioMixer.u8Verbose)
 		{
 			xil_printf("\r\nInitialization failed %d");
 		}
@@ -154,7 +154,7 @@ XStatus fnConfigDma(XAxiDma *AxiDma)
 	//Ensures that the Scatter Gather mode is not active
 	if(XAxiDma_HasSg(AxiDma))
 	{
-		if (Demo.u8Verbose)
+		if (AudioMixer.u8Verbose)
 		{
 
 			xil_printf("\r\nDevice configured as SG mode");

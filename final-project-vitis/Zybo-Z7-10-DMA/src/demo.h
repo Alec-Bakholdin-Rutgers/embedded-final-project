@@ -24,7 +24,7 @@
 /*																		*/
 /************************************************************************/
 
-#ifndef MAIN_H_
+#ifdef MAIN_H_
 #define MAIN_H_
 
 /***************************** Include Files *********************************/
@@ -107,12 +107,12 @@ typedef struct {
 	int linkSpeed;
 	int mac;
 	XStatus fMacStatus;
-} sDemo_t;
+} sAudioMixer_t;
 
 /************************** Function Prototypes ******************************/
 
 
 // This variable holds the demo related settings
-volatile sDemo_t Demo;
+extern sAudioMixer_t AudioMixer;
 
 #endif /* MAIN_H_ */

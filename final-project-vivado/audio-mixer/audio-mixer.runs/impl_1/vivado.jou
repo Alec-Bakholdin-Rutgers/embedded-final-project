@@ -2,11 +2,11 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Wed Dec  8 17:19:43 2021
-# Process ID: 1540662
+# Start of session at: Sun Dec 12 18:45:15 2021
+# Process ID: 271890
 # Current directory: /home/user/final-project/final-project-vivado/audio-mixer/audio-mixer.runs/impl_1
-# Command line: vivado -log design_1_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
-# Log file: /home/user/final-project/final-project-vivado/audio-mixer/audio-mixer.runs/impl_1/design_1_wrapper.vdi
+# Command line: vivado -log system_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source system_wrapper.tcl -notrace
+# Log file: /home/user/final-project/final-project-vivado/audio-mixer/audio-mixer.runs/impl_1/system_wrapper.vdi
 # Journal file: /home/user/final-project/final-project-vivado/audio-mixer/audio-mixer.runs/impl_1/vivado.jou
 #-----------------------------------------------------------
-source design_1_wrapper.tcl -notrace
+source system_wrapper.tcl -notrace

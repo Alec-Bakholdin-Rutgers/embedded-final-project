@@ -1,0 +1,10 @@
+2021-12-12T17:22:29.24847600255-17:22:29 **** Incremental Build of configuration Debug for project Zybo-Z7-10-DMA_system ****
+000-make all 
+000-Generating bif file for the system project
+000-Executing command '::scw::generate_bif -xpfm /home/user/workspace/system_wrapper/export/system_wrapper/system_wrapper.xpfm -domains domain_ps7_cortexa9_0 -bifpath /home/user/workspace/Zybo-Z7-10-DMA_system/Debug/system.bif' on XSCT
+000-sdcard_gen --xpfm /home/user/workspace/system_wrapper/export/system_wrapper/system_wrapper.xpfm --sys_config system_wrapper --bif /home/user/workspace/Zybo-Z7-10-DMA_system/Debug/system.bif --bitstream /home/user/workspace/Zybo-Z7-10-DMA/_ide/bitstream/system_wrapper.bit --elf /home/user/workspace/Zybo-Z7-10-DMA/Debug/Zybo-Z7-10-DMA.elf,ps7_cortexa9_0
+000-creating BOOT.BIN using /home/user/workspace/Zybo-Z7-10-DMA/_ide/bitstream/system_wrapper.bit
+000-Running /home/software/Xilinx/Vitis/2021.1/bin/bootgen  -image /home/user/workspace/Zybo-Z7-10-DMA_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+00255-
+17:22:36 Build Finished (took 7s.29ms)
+

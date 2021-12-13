@@ -53,11 +53,9 @@
 #include <stdio.h>
 #include "xparameters.h"
 #include "userio.h"
-#include "../demo.h"
+#include "../main.h"
 
 #define USERIO_DEVICE_ID 	0
-
-extern volatile sDemo_t Demo;
 
 void fnUpdateLedsFromSwitches(XGpio *psGpio);
 
@@ -100,7 +98,7 @@ void fnUpdateLedsFromSwitches(XGpio *psGpio)
 	dwBtnSw = XGpio_DiscreteRead(psGpio, BTN_SW_CHANNEL);
 	dwBtn = dwBtnSw & (BTNU_MASK|BTNR_MASK|BTND_MASK|BTNL_MASK|BTNC_MASK);
 	if (dwBtn==0){//No buttons pressed?
-		Demo.fUserIOEvent = 0;
+		AudioMixer.fUserIOEvent = 0;
 		dwPrevButtons = dwBtn;
 		return;
 	}
@@ -113,39 +111,39 @@ void fnUpdateLedsFromSwitches(XGpio *psGpio)
 
 		dwChanges = dwBtn ^ dwPrevButtons;
 		if (dwChanges & BTNU_MASK) {
-			Demo.chBtn = 'u';
-			if(Demo.u8Verbose) {
+			AudioMixer.chBtn = 'u';
+			if(AudioMixer.u8Verbose) {
 				xil_printf("\r\nBTNU");
 			}
 		}
 		if (dwChanges & BTNR_MASK) {
-			Demo.chBtn = 'r';
-			if(Demo.u8Verbose) {
+			AudioMixer.chBtn = 'r';
+			if(AudioMixer.u8Verbose) {
 				xil_printf("\r\nBTNR");
 			}
 		}
 		if (dwChanges & BTND_MASK) {
-			Demo.chBtn = 'd';
-			if(Demo.u8Verbose) {
+			AudioMixer.chBtn = 'd';
+			if(AudioMixer.u8Verbose) {
 				xil_printf("\r\nBTND");
 			}
 		}
 		if (dwChanges & BTNL_MASK) {
-			Demo.chBtn = 'l';
-			if(Demo.u8Verbose) {
+			AudioMixer.chBtn = 'l';
+			if(AudioMixer.u8Verbose) {
 				xil_printf("\r\nBTNL");
 			}
 		}
 		if (dwChanges & BTNC_MASK) {
-			Demo.chBtn = 'c';
-			if(Demo.u8Verbose) {
+			AudioMixer.chBtn = 'c';
+			if(AudioMixer.u8Verbose) {
 				xil_printf("\r\nBTNC");
 			}
 		}
 
 		// Keep values in mind
 		//dwPrevSwitches = dwSw;
-		Demo.fUserIOEvent = 1;
+		AudioMixer.fUserIOEvent = 1;
 		dwPrevButtons = dwBtn;
 	}
 }

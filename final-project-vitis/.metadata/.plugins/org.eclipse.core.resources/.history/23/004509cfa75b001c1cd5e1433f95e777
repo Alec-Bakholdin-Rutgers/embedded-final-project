@@ -1,0 +1,26 @@
+#include "main.h"
+
+#include "audio/audio.h"
+#include "dma/dma.h"
+#include "intc/intc.h"
+#include "userio/userio.h"
+#include "iic/iic.h"
+
+/***************************** Include Files *********************************/
+
+#include "xaxidma.h"
+#include "xparameters.h"
+#include "xil_exception.h"
+#include "xdebug.h"
+#include "xiic.h"
+#include "xaxidma.h"
+#include "xtime_l.h"
+
+
+sAudioMixer_t AudioMixer;
+int main(void) {
+
+	while(1) {
+
+	}
+}
