@@ -1,0 +1,7 @@
+
+void ProjectInit();
+void ProjectRun();
+void ProjectCleanup();
+
+void SetTime(PmodRTCC *rtcc, RTCC_Time *time);
+void GetTime(PmodRTCC *rtcc, RTCC_Time *time, RTCC_Target src);

@@ -1,0 +1,4 @@
+
+void ProjectInit();
+void ProjectRun();
+void ProjectCleanup();

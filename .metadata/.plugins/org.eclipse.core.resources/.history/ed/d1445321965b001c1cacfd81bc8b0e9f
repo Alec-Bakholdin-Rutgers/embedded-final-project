@@ -1,0 +1,6 @@
+2021-12-12T16:53:44.4401300255-16:53:44 **** Incremental Build of configuration Debug for project Zybo-Z7-10-DMA ****
+000-make all 
+000/Zybo-Z7-10-DMA/Debug/src/intc/intc.d1-1-1make: *** target pattern contains no '%'.  Stop.2-src/intc/intc.d:1: *** target pattern contains no '%'.  Stop.
+00255-
+16:53:44 Build Finished (took 412ms)
+
