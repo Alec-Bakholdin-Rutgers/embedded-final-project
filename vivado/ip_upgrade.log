@@ -1,0 +1,444 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Sun Dec 19 00:43:22 2021
+| Host         : ALEC-PC running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_rst_ps7_0_50M_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_1_rst_ps7_0_50M_0 (xilinx.com:ip:proc_sys_reset:5.0 (Rev. 13)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Sun Dec 19 00:43:22 2021
+| Host         : ALEC-PC running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_processing_system7_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_1_processing_system7_0_0 (xilinx.com:ip:processing_system7:5.5 (Rev. 6)) to Vivado generation flows.
+
+2. Upgrade messages
+-------------------
+
+WARNING: upgrade cannot add parameter PCW_TRACE_INTERNAL_WIDTH with default value 32 : a parameter called PCW_TRACE_INTERNAL_WIDTH already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_USE_AXI_NONSECURE with default value 0 : a parameter called PCW_USE_AXI_NONSECURE already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_EN_PTP_ENET0 with default value 1 : a parameter called PCW_EN_PTP_ENET0 already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_EN_PTP_ENET0 with default value 1 : a parameter called PCW_EN_PTP_ENET0 already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_GP0_NUM_WRITE_THREADS with default value 4 : a parameter called PCW_GP0_NUM_WRITE_THREADS already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_GP0_NUM_READ_THREADS with default value 4 : a parameter called PCW_GP0_NUM_READ_THREADS already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_GP1_NUM_WRITE_THREADS with default value 4 : a parameter called PCW_GP1_NUM_WRITE_THREADS already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_GP1_NUM_READ_THREADS with default value 4 : a parameter called PCW_GP1_NUM_READ_THREADS already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_GP0_EN_MODIFIABLE_TXN with default value 0 : a parameter called PCW_GP0_EN_MODIFIABLE_TXN already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_GP1_EN_MODIFIABLE_TXN with default value 0 : a parameter called PCW_GP1_EN_MODIFIABLE_TXN already exists in processing_system7_v5_5
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Sun Dec 19 00:43:22 2021
+| Host         : ALEC-PC running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_PmodTMP3_0_2'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the conversion of design_1_PmodTMP3_0_2 (digilentinc.com:IP:PmodTMP3:1.0 (Rev. 19)) to Vivado generation flows.
+
+After upgrade, an IP may have parameter differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality.
+
+2. Customization warnings
+-------------------------
+
+The normal upgrade process failed due to validation failures in the given configuration. Attempting partial upgrade to set as many user parameters as possible. Please check the parameters whose values were not applied.
+
+Unable to set the value 'jc' on parameter 'Pmod' due to the following failure - 
+Value 'jc' is out of the range for parameter 'Pmod(PMOD)' for BD Cell 'design_1_PmodTMP3_0_2' . Valid values are - Custom
+. Restoring to an old valid value of 'Custom'
+
+
+3. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv digilentinc.com:IP:PmodTMP3:1.0 -user_name design_1_PmodTMP3_0_2
+set_property -dict "\
+  CONFIG.AXI_LITE_IIC.ADDR_WIDTH {12} \
+  CONFIG.AXI_LITE_IIC.ARUSER_WIDTH {0} \
+  CONFIG.AXI_LITE_IIC.AWUSER_WIDTH {0} \
+  CONFIG.AXI_LITE_IIC.BUSER_WIDTH {0} \
+  CONFIG.AXI_LITE_IIC.CLK_DOMAIN {design_1_processing_system7_0_0_FCLK_CLK0} \
+  CONFIG.AXI_LITE_IIC.DATA_WIDTH {32} \
+  CONFIG.AXI_LITE_IIC.FREQ_HZ {50000000} \
+  CONFIG.AXI_LITE_IIC.HAS_BRESP {1} \
+  CONFIG.AXI_LITE_IIC.HAS_BURST {0} \
+  CONFIG.AXI_LITE_IIC.HAS_CACHE {0} \
+  CONFIG.AXI_LITE_IIC.HAS_LOCK {0} \
+  CONFIG.AXI_LITE_IIC.HAS_PROT {0} \
+  CONFIG.AXI_LITE_IIC.HAS_QOS {0} \
+  CONFIG.AXI_LITE_IIC.HAS_REGION {0} \
+  CONFIG.AXI_LITE_IIC.HAS_RRESP {1} \
+  CONFIG.AXI_LITE_IIC.HAS_WSTRB {1} \
+  CONFIG.AXI_LITE_IIC.ID_WIDTH {0} \
+  CONFIG.AXI_LITE_IIC.INSERT_VIP {0} \
+  CONFIG.AXI_LITE_IIC.MAX_BURST_LENGTH {1} \
+  CONFIG.AXI_LITE_IIC.NUM_READ_OUTSTANDING {1} \
+  CONFIG.AXI_LITE_IIC.NUM_READ_THREADS {1} \
+  CONFIG.AXI_LITE_IIC.NUM_WRITE_OUTSTANDING {1} \
+  CONFIG.AXI_LITE_IIC.NUM_WRITE_THREADS {1} \
+  CONFIG.AXI_LITE_IIC.PHASE {0.0} \
+  CONFIG.AXI_LITE_IIC.PROTOCOL {AXI4LITE} \
+  CONFIG.AXI_LITE_IIC.READ_WRITE_MODE {READ_WRITE} \
+  CONFIG.AXI_LITE_IIC.RUSER_BITS_PER_BYTE {0} \
+  CONFIG.AXI_LITE_IIC.RUSER_WIDTH {0} \
+  CONFIG.AXI_LITE_IIC.SUPPORTS_NARROW_BURST {0} \
+  CONFIG.AXI_LITE_IIC.WUSER_BITS_PER_BYTE {0} \
+  CONFIG.AXI_LITE_IIC.WUSER_WIDTH {0} \
+  CONFIG.AXI_LITE_IIC_BASEADDR {0xFFFFFFFF} \
+  CONFIG.AXI_LITE_IIC_HIGHADDR {0x00000000} \
+  CONFIG.CLK.S_AXI_ACLK.ASSOCIATED_BUSIF {AXI_LITE_IIC} \
+  CONFIG.CLK.S_AXI_ACLK.ASSOCIATED_RESET {s_axi_aresetn} \
+  CONFIG.CLK.S_AXI_ACLK.CLK_DOMAIN {design_1_processing_system7_0_0_FCLK_CLK0} \
+  CONFIG.CLK.S_AXI_ACLK.FREQ_HZ {50000000} \
+  CONFIG.CLK.S_AXI_ACLK.FREQ_TOLERANCE_HZ {0} \
+  CONFIG.CLK.S_AXI_ACLK.INSERT_VIP {0} \
+  CONFIG.CLK.S_AXI_ACLK.PHASE {0.0} \
+  CONFIG.Component_Name {design_1_PmodTMP3_0_2} \
+  CONFIG.INTR.I2C_INTERRUPT.PortWidth {1} \
+  CONFIG.INTR.I2C_INTERRUPT.SENSITIVITY {LEVEL_HIGH} \
+  CONFIG.PMOD {jc} \
+  CONFIG.Pmod_out.BOARD.ASSOCIATED_PARAM {PMOD} \
+  CONFIG.Pmod_out.BUSIF.BOARD_INTERFACE {Custom} \
+  CONFIG.RST.S_AXI_ARESETN.INSERT_VIP {0} \
+  CONFIG.RST.S_AXI_ARESETN.POLARITY {ACTIVE_LOW} \
+  CONFIG.USE_BOARD_FLOW {true} " [get_ips design_1_PmodTMP3_0_2]
+
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Sun Dec 19 00:43:22 2021
+| Host         : ALEC-PC running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_PmodRTCC_0_2'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the conversion of design_1_PmodRTCC_0_2 (digilentinc.com:IP:PmodRTCC:1.0 (Rev. 15)) to Vivado generation flows.
+
+After upgrade, an IP may have parameter differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality.
+
+2. Customization warnings
+-------------------------
+
+The normal upgrade process failed due to validation failures in the given configuration. Attempting partial upgrade to set as many user parameters as possible. Please check the parameters whose values were not applied.
+
+Unable to set the value 'jb' on parameter 'Pmod' due to the following failure - 
+Value 'jb' is out of the range for parameter 'Pmod(PMOD)' for BD Cell 'design_1_PmodRTCC_0_2' . Valid values are - Custom
+. Restoring to an old valid value of 'Custom'
+
+
+3. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv digilentinc.com:IP:PmodRTCC:1.0 -user_name design_1_PmodRTCC_0_2
+set_property -dict "\
+  CONFIG.AXI_LITE_IIC.ADDR_WIDTH {12} \
+  CONFIG.AXI_LITE_IIC.ARUSER_WIDTH {0} \
+  CONFIG.AXI_LITE_IIC.AWUSER_WIDTH {0} \
+  CONFIG.AXI_LITE_IIC.BUSER_WIDTH {0} \
+  CONFIG.AXI_LITE_IIC.CLK_DOMAIN {design_1_processing_system7_0_0_FCLK_CLK0} \
+  CONFIG.AXI_LITE_IIC.DATA_WIDTH {32} \
+  CONFIG.AXI_LITE_IIC.FREQ_HZ {50000000} \
+  CONFIG.AXI_LITE_IIC.HAS_BRESP {1} \
+  CONFIG.AXI_LITE_IIC.HAS_BURST {0} \
+  CONFIG.AXI_LITE_IIC.HAS_CACHE {0} \
+  CONFIG.AXI_LITE_IIC.HAS_LOCK {0} \
+  CONFIG.AXI_LITE_IIC.HAS_PROT {0} \
+  CONFIG.AXI_LITE_IIC.HAS_QOS {0} \
+  CONFIG.AXI_LITE_IIC.HAS_REGION {0} \
+  CONFIG.AXI_LITE_IIC.HAS_RRESP {1} \
+  CONFIG.AXI_LITE_IIC.HAS_WSTRB {1} \
+  CONFIG.AXI_LITE_IIC.ID_WIDTH {0} \
+  CONFIG.AXI_LITE_IIC.INSERT_VIP {0} \
+  CONFIG.AXI_LITE_IIC.MAX_BURST_LENGTH {1} \
+  CONFIG.AXI_LITE_IIC.NUM_READ_OUTSTANDING {1} \
+  CONFIG.AXI_LITE_IIC.NUM_READ_THREADS {1} \
+  CONFIG.AXI_LITE_IIC.NUM_WRITE_OUTSTANDING {1} \
+  CONFIG.AXI_LITE_IIC.NUM_WRITE_THREADS {1} \
+  CONFIG.AXI_LITE_IIC.PHASE {0.0} \
+  CONFIG.AXI_LITE_IIC.PROTOCOL {AXI4LITE} \
+  CONFIG.AXI_LITE_IIC.READ_WRITE_MODE {READ_WRITE} \
+  CONFIG.AXI_LITE_IIC.RUSER_BITS_PER_BYTE {0} \
+  CONFIG.AXI_LITE_IIC.RUSER_WIDTH {0} \
+  CONFIG.AXI_LITE_IIC.SUPPORTS_NARROW_BURST {0} \
+  CONFIG.AXI_LITE_IIC.WUSER_BITS_PER_BYTE {0} \
+  CONFIG.AXI_LITE_IIC.WUSER_WIDTH {0} \
+  CONFIG.AXI_LITE_IIC_BASEADDR {0xFFFFFFFF} \
+  CONFIG.AXI_LITE_IIC_HIGHADDR {0x00000000} \
+  CONFIG.CLK.S_AXI_ACLK.ASSOCIATED_BUSIF {AXI_LITE_IIC} \
+  CONFIG.CLK.S_AXI_ACLK.ASSOCIATED_RESET {s_axi_aresetn} \
+  CONFIG.CLK.S_AXI_ACLK.CLK_DOMAIN {design_1_processing_system7_0_0_FCLK_CLK0} \
+  CONFIG.CLK.S_AXI_ACLK.FREQ_HZ {50000000} \
+  CONFIG.CLK.S_AXI_ACLK.FREQ_TOLERANCE_HZ {0} \
+  CONFIG.CLK.S_AXI_ACLK.INSERT_VIP {0} \
+  CONFIG.CLK.S_AXI_ACLK.PHASE {0.0} \
+  CONFIG.Component_Name {design_1_PmodRTCC_0_2} \
+  CONFIG.INTR.I2C_INTERRUPT.PortWidth {1} \
+  CONFIG.INTR.I2C_INTERRUPT.SENSITIVITY {LEVEL_HIGH} \
+  CONFIG.PMOD {jb} \
+  CONFIG.Pmod_out.BOARD.ASSOCIATED_PARAM {PMOD} \
+  CONFIG.Pmod_out.BUSIF.BOARD_INTERFACE {Custom} \
+  CONFIG.RST.S_AXI_ARESETN.INSERT_VIP {0} \
+  CONFIG.RST.S_AXI_ARESETN.POLARITY {ACTIVE_LOW} \
+  CONFIG.USE_BOARD_FLOW {true} " [get_ips design_1_PmodRTCC_0_2]
+
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Sun Dec 19 00:43:22 2021
+| Host         : ALEC-PC running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_PmodOLED_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_PmodOLED_0_0 (digilentinc.com:IP:PmodOLED:1.0) from (Rev. 20) to (Rev. 22)
+
+After upgrade, an IP may have parameter differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality.
+
+2. Customization warnings
+-------------------------
+
+The normal upgrade process failed due to validation failures in the given configuration. Attempting partial upgrade to set as many user parameters as possible. Please check the parameters whose values were not applied.
+
+Unable to set the value 'ja' on parameter 'Pmod' due to the following failure - 
+Value 'ja' is out of the range for parameter 'Pmod(PMOD)' for BD Cell 'design_1_PmodOLED_0_0' . Valid values are - Custom
+. Restoring to an old valid value of 'Custom'
+
+
+3. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv digilentinc.com:IP:PmodOLED:1.0 -user_name design_1_PmodOLED_0_0
+set_property -dict "\
+  CONFIG.AXI_LITE_GPIO.ADDR_WIDTH {9} \
+  CONFIG.AXI_LITE_GPIO.ARUSER_WIDTH {0} \
+  CONFIG.AXI_LITE_GPIO.AWUSER_WIDTH {0} \
+  CONFIG.AXI_LITE_GPIO.BUSER_WIDTH {0} \
+  CONFIG.AXI_LITE_GPIO.CLK_DOMAIN {design_1_processing_system7_0_0_FCLK_CLK0} \
+  CONFIG.AXI_LITE_GPIO.DATA_WIDTH {32} \
+  CONFIG.AXI_LITE_GPIO.FREQ_HZ {50000000} \
+  CONFIG.AXI_LITE_GPIO.HAS_BRESP {1} \
+  CONFIG.AXI_LITE_GPIO.HAS_BURST {0} \
+  CONFIG.AXI_LITE_GPIO.HAS_CACHE {0} \
+  CONFIG.AXI_LITE_GPIO.HAS_LOCK {0} \
+  CONFIG.AXI_LITE_GPIO.HAS_PROT {0} \
+  CONFIG.AXI_LITE_GPIO.HAS_QOS {0} \
+  CONFIG.AXI_LITE_GPIO.HAS_REGION {0} \
+  CONFIG.AXI_LITE_GPIO.HAS_RRESP {1} \
+  CONFIG.AXI_LITE_GPIO.HAS_WSTRB {1} \
+  CONFIG.AXI_LITE_GPIO.ID_WIDTH {0} \
+  CONFIG.AXI_LITE_GPIO.INSERT_VIP {0} \
+  CONFIG.AXI_LITE_GPIO.MAX_BURST_LENGTH {1} \
+  CONFIG.AXI_LITE_GPIO.NUM_READ_OUTSTANDING {1} \
+  CONFIG.AXI_LITE_GPIO.NUM_READ_THREADS {1} \
+  CONFIG.AXI_LITE_GPIO.NUM_WRITE_OUTSTANDING {1} \
+  CONFIG.AXI_LITE_GPIO.NUM_WRITE_THREADS {1} \
+  CONFIG.AXI_LITE_GPIO.PHASE {0.0} \
+  CONFIG.AXI_LITE_GPIO.PROTOCOL {AXI4LITE} \
+  CONFIG.AXI_LITE_GPIO.READ_WRITE_MODE {READ_WRITE} \
+  CONFIG.AXI_LITE_GPIO.RUSER_BITS_PER_BYTE {0} \
+  CONFIG.AXI_LITE_GPIO.RUSER_WIDTH {0} \
+  CONFIG.AXI_LITE_GPIO.SUPPORTS_NARROW_BURST {0} \
+  CONFIG.AXI_LITE_GPIO.WUSER_BITS_PER_BYTE {0} \
+  CONFIG.AXI_LITE_GPIO.WUSER_WIDTH {0} \
+  CONFIG.AXI_LITE_GPIO_BASEADDR {0xFFFFFFFF} \
+  CONFIG.AXI_LITE_GPIO_HIGHADDR {0x00000000} \
+  CONFIG.AXI_LITE_SPI.ADDR_WIDTH {7} \
+  CONFIG.AXI_LITE_SPI.ARUSER_WIDTH {0} \
+  CONFIG.AXI_LITE_SPI.AWUSER_WIDTH {0} \
+  CONFIG.AXI_LITE_SPI.BUSER_WIDTH {0} \
+  CONFIG.AXI_LITE_SPI.CLK_DOMAIN {design_1_processing_system7_0_0_FCLK_CLK0} \
+  CONFIG.AXI_LITE_SPI.DATA_WIDTH {32} \
+  CONFIG.AXI_LITE_SPI.FREQ_HZ {50000000} \
+  CONFIG.AXI_LITE_SPI.HAS_BRESP {1} \
+  CONFIG.AXI_LITE_SPI.HAS_BURST {0} \
+  CONFIG.AXI_LITE_SPI.HAS_CACHE {0} \
+  CONFIG.AXI_LITE_SPI.HAS_LOCK {0} \
+  CONFIG.AXI_LITE_SPI.HAS_PROT {0} \
+  CONFIG.AXI_LITE_SPI.HAS_QOS {0} \
+  CONFIG.AXI_LITE_SPI.HAS_REGION {0} \
+  CONFIG.AXI_LITE_SPI.HAS_RRESP {1} \
+  CONFIG.AXI_LITE_SPI.HAS_WSTRB {1} \
+  CONFIG.AXI_LITE_SPI.ID_WIDTH {0} \
+  CONFIG.AXI_LITE_SPI.INSERT_VIP {0} \
+  CONFIG.AXI_LITE_SPI.MAX_BURST_LENGTH {1} \
+  CONFIG.AXI_LITE_SPI.NUM_READ_OUTSTANDING {1} \
+  CONFIG.AXI_LITE_SPI.NUM_READ_THREADS {1} \
+  CONFIG.AXI_LITE_SPI.NUM_WRITE_OUTSTANDING {1} \
+  CONFIG.AXI_LITE_SPI.NUM_WRITE_THREADS {1} \
+  CONFIG.AXI_LITE_SPI.PHASE {0.0} \
+  CONFIG.AXI_LITE_SPI.PROTOCOL {AXI4LITE} \
+  CONFIG.AXI_LITE_SPI.READ_WRITE_MODE {READ_WRITE} \
+  CONFIG.AXI_LITE_SPI.RUSER_BITS_PER_BYTE {0} \
+  CONFIG.AXI_LITE_SPI.RUSER_WIDTH {0} \
+  CONFIG.AXI_LITE_SPI.SUPPORTS_NARROW_BURST {0} \
+  CONFIG.AXI_LITE_SPI.WUSER_BITS_PER_BYTE {0} \
+  CONFIG.AXI_LITE_SPI.WUSER_WIDTH {0} \
+  CONFIG.AXI_LITE_SPI_BASEADDR {0xFFFFFFFF} \
+  CONFIG.AXI_LITE_SPI_HIGHADDR {0x00000000} \
+  CONFIG.CLK.S_AXI_ACLK.ASSOCIATED_BUSIF {AXI_LITE_SPI:AXI_LITE_GPIO} \
+  CONFIG.CLK.S_AXI_ACLK.ASSOCIATED_RESET {s_axi_aresetn} \
+  CONFIG.CLK.S_AXI_ACLK.CLK_DOMAIN {design_1_processing_system7_0_0_FCLK_CLK0} \
+  CONFIG.CLK.S_AXI_ACLK.FREQ_HZ {50000000} \
+  CONFIG.CLK.S_AXI_ACLK.FREQ_TOLERANCE_HZ {0} \
+  CONFIG.CLK.S_AXI_ACLK.INSERT_VIP {0} \
+  CONFIG.CLK.S_AXI_ACLK.PHASE {0.0} \
+  CONFIG.Component_Name {design_1_PmodOLED_0_0} \
+  CONFIG.PMOD {ja} \
+  CONFIG.Pmod_out.BOARD.ASSOCIATED_PARAM {PMOD} \
+  CONFIG.Pmod_out.BUSIF.BOARD_INTERFACE {Custom} \
+  CONFIG.RST.S_AXI_ARESETN.INSERT_VIP {0} \
+  CONFIG.RST.S_AXI_ARESETN.POLARITY {ACTIVE_LOW} \
+  CONFIG.USE_BOARD_FLOW {true} " [get_ips design_1_PmodOLED_0_0]
+
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
+| Date         : Sat Dec 18 14:54:25 2021
+| Host         : ece36 running 64-bit Ubuntu 20.04.2 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_rst_ps7_0_50M_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_1_rst_ps7_0_50M_0 (xilinx.com:ip:proc_sys_reset:5.0 (Rev. 13)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
+| Date         : Sat Dec 18 14:54:25 2021
+| Host         : ece36 running 64-bit Ubuntu 20.04.2 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_processing_system7_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_1_processing_system7_0_0 (xilinx.com:ip:processing_system7:5.5 (Rev. 6)) to Vivado generation flows.
+
+2. Upgrade messages
+-------------------
+
+WARNING: upgrade cannot add parameter PCW_TRACE_INTERNAL_WIDTH with default value 32 : a parameter called PCW_TRACE_INTERNAL_WIDTH already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_USE_AXI_NONSECURE with default value 0 : a parameter called PCW_USE_AXI_NONSECURE already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_EN_PTP_ENET0 with default value 1 : a parameter called PCW_EN_PTP_ENET0 already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_EN_PTP_ENET0 with default value 1 : a parameter called PCW_EN_PTP_ENET0 already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_GP0_NUM_WRITE_THREADS with default value 4 : a parameter called PCW_GP0_NUM_WRITE_THREADS already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_GP0_NUM_READ_THREADS with default value 4 : a parameter called PCW_GP0_NUM_READ_THREADS already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_GP1_NUM_WRITE_THREADS with default value 4 : a parameter called PCW_GP1_NUM_WRITE_THREADS already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_GP1_NUM_READ_THREADS with default value 4 : a parameter called PCW_GP1_NUM_READ_THREADS already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_GP0_EN_MODIFIABLE_TXN with default value 0 : a parameter called PCW_GP0_EN_MODIFIABLE_TXN already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_GP1_EN_MODIFIABLE_TXN with default value 0 : a parameter called PCW_GP1_EN_MODIFIABLE_TXN already exists in processing_system7_v5_5
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
+| Date         : Sat Dec 18 14:54:25 2021
+| Host         : ece36 running 64-bit Ubuntu 20.04.2 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_PmodOLED_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_1_PmodOLED_0_0 (digilentinc.com:IP:PmodOLED:1.0 (Rev. 20)) to Vivado generation flows.
+
